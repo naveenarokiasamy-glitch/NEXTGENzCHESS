@@ -22,7 +22,7 @@
 .book { position: relative; width: var(--bw); height: var(--bh); transform-style: preserve-3d; }
 .book-cover { position: absolute; inset: 0; transform-origin: left; transform-style: preserve-3d; }
 .book-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border: 3px solid var(--primary); background: var(--secondary); color: var(--primary); overflow: hidden; }
-.book-cover-front { padding: 0; border-radius: 4px 10px 10px 4px; transform: translateZ(0.5px); box-shadow: 8px 8px 0 var(--primary); cursor: pointer; }
+.book-cover-front { padding: 0; border-radius: 4px 10px 10px 4px; transform: translateZ(0.5px); box-shadow: 8px 8px 0 var(--shadow); cursor: pointer; }
 .book-cover-back { transform: rotateY(180deg) translateZ(0.5px); border-radius: 10px 4px 4px 10px; display: grid; place-items: center; text-align: center; cursor: pointer; }
 .book-cover-inner h2 { font-size: 1.6rem; }
 .book-pages { position: absolute; inset: 0; transform-style: preserve-3d; z-index: 0; }
@@ -39,7 +39,7 @@
 /* ---------- Narrow: single page reader ---------- */
 .book-single { display: grid; gap: 1rem; justify-items: center; width: 100%; }
 .book-single-frame { position: relative; width: min(100%, 380px); min-height: 440px; perspective: 1200px; }
-.book-single-page { position: relative; min-height: 440px; background: var(--secondary); border: 3px solid var(--primary); border-radius: 6px 14px 14px 6px; box-shadow: 6px 6px 0 var(--primary); overflow: hidden; }
+.book-single-page { position: relative; min-height: 440px; background: var(--secondary); border: 3px solid var(--primary); border-radius: 6px 14px 14px 6px; box-shadow: 6px 6px 0 var(--shadow); overflow: hidden; }
 .book-single-cover { position: absolute; inset: 0; width: 100%; padding: 0; border: 0; background: none; }
 .book-single-leaf { padding: 2.75rem 1.4rem 1.5rem; position: relative; min-height: 440px; }
 .book-single-end { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 1rem; font-weight: 700; }

@@ -1,13 +1,16 @@
-/* NXT GENZ Chess Academy: two-colour system.
+/* NXT GENZ Chess Academy: two-colour system (subtle black and white, with neutral grey tints).
    Only --primary and --secondary are used for UI. Chess photographs keep their natural colours. */
 :root {
-  --primary: #27187E;
-  --secondary: #F7F7FF;
+  --primary: #121212;   /* ink black */
+  --secondary: #F8F8F8; /* card / text-on-dark white */
+  --paper: #ECECEC;     /* page background: soft grey-white so white cards lift off it */
+  --shadow: #ABABAB;    /* soft hard-offset shadow on light areas */
+  --shadow-dark: #4D4D4D; /* soft hard-offset shadow on black areas */
 
   /* Context variables: sections swap these so buttons, cards and rules always contrast. */
   --on: var(--primary);
   --bg: var(--secondary);
-  --edge: var(--primary);
+  --edge: var(--shadow);
   --ring: var(--primary);
 
   --font-display: "Bricolage Grotesque", "Inter", system-ui, sans-serif;
@@ -21,7 +24,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-bottom: var(--nav-space); -webkit-text-size-adjust: 100%; }
 body {
-  background: var(--secondary);
+  background: var(--paper);
   color: var(--primary);
   font-family: var(--font-body);
   line-height: 1.6;
@@ -44,8 +47,8 @@ button { cursor: pointer; }
 .section { position: relative; padding-block: clamp(3.5rem, 8vw, 6rem); }
 
 /* Section colour bands: purple sections hold white text, white sections hold purple text. */
-.band-dark { background: var(--primary); color: var(--secondary); --on: var(--secondary); --bg: var(--primary); --edge: var(--secondary); --ring: var(--secondary); }
-.band-light { background: var(--secondary); color: var(--primary); --on: var(--primary); --bg: var(--secondary); --edge: var(--primary); --ring: var(--primary); }
+.band-dark { background: var(--primary); color: var(--secondary); --on: var(--secondary); --bg: var(--primary); --edge: var(--shadow-dark); --ring: var(--secondary); }
+.band-light { background: var(--paper); color: var(--primary); --on: var(--primary); --bg: var(--secondary); --edge: var(--shadow); --ring: var(--primary); }
 
 /* Chessboard strip that sits on the lower edge of a purple section. */
 .checker-edge { position: relative; }
@@ -91,7 +94,7 @@ button { cursor: pointer; }
 .page-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
 .page-hero h1 { font-size: clamp(2.4rem, 7vw, 5rem); margin-bottom: 1rem; }
 .page-hero p { max-width: 46ch; font-size: clamp(1.05rem, 2vw, 1.3rem); }
-.hero-photo { position: relative; aspect-ratio: 4 / 3; border: 4px solid var(--secondary); border-radius: var(--radius); box-shadow: 10px 10px 0 var(--secondary); overflow: hidden; transform: rotate(2deg); }
+.hero-photo { position: relative; aspect-ratio: 4 / 3; border: 4px solid var(--secondary); border-radius: var(--radius); box-shadow: 10px 10px 0 var(--shadow-dark); overflow: hidden; transform: rotate(2deg); }
 
 /* ---------- Grids ---------- */
 .grid { display: grid; gap: clamp(1rem, 2.5vw, 1.75rem); }
@@ -120,7 +123,7 @@ button { cursor: pointer; }
 @media (max-width: 767px) {
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .page-hero-grid { grid-template-columns: 1fr; }
-  .hero-photo { transform: none; box-shadow: 6px 6px 0 var(--secondary); max-width: 460px; }
+  .hero-photo { transform: none; box-shadow: 6px 6px 0 var(--shadow-dark); max-width: 460px; }
   .card { box-shadow: 4px 4px 0 var(--edge); }
 }
 @media (pointer: coarse) { :root { --target: 48px; } }
@@ -137,4 +140,4 @@ button { cursor: pointer; }
 
 /* Closing call-to-action block that sits in a white section. */
 .band-light + .cta-section { padding-top: 0; }
-.cta-section .cta-band { border: 4px solid var(--primary); border-radius: 22px; box-shadow: 10px 10px 0 var(--primary); }
+.cta-section .cta-band { border: 4px solid var(--primary); border-radius: 22px; box-shadow: 10px 10px 0 var(--shadow); }

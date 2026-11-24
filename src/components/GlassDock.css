@@ -7,7 +7,7 @@
 .glass-dock {
   position: relative; pointer-events: auto; display: flex; align-items: center; justify-content: center;
   gap: clamp(0.15rem, 1.6vw, 0.9rem); padding: 0.5rem clamp(0.5rem, 2vw, 1.1rem); max-width: 100%;
-  background: var(--secondary); border: 3px solid var(--primary); border-radius: 20px; box-shadow: 5px 5px 0 var(--primary);
+  background: var(--secondary); border: 3px solid var(--primary); border-radius: 20px; box-shadow: 5px 5px 0 var(--shadow);
 }
 .dock-item {
   position: relative; display: grid; place-items: center; flex: 0 0 auto;

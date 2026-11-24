@@ -1,7 +1,7 @@
 .team-grid { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; align-items: start; }
 .team-card { width: 100%; background: none; border: 0; text-align: center; min-height: var(--target); }
 .team-photo { position: relative; height: 170px; border-radius: 16px; overflow: hidden; border: 3px solid var(--primary); transition: height 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s; }
-.team-card.active .team-photo { height: 240px; box-shadow: 6px 6px 0 var(--primary); }
+.team-card.active .team-photo { height: 240px; box-shadow: 6px 6px 0 var(--shadow); }
 .team-details { position: absolute; inset: auto 0 0 0; padding: 0.9rem; background: var(--primary); color: var(--secondary); opacity: 0; transform: translateY(100%); transition: opacity 0.4s, transform 0.4s; }
 .team-card.active .team-details { opacity: 1; transform: none; }
 .team-details p { font-size: 0.85rem; text-align: left; }

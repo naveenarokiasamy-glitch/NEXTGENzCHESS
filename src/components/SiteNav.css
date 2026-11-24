@@ -2,7 +2,7 @@
   position: absolute; top: max(0.9rem, env(safe-area-inset-top, 0px)); left: var(--gutter); z-index: 20;
   display: inline-flex; align-items: center; gap: 0.6rem; min-height: 44px; padding: 0.3rem 1rem 0.3rem 0.35rem;
   background: var(--secondary); color: var(--primary); border: 3px solid var(--primary); border-radius: 999px;
-  font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; box-shadow: 4px 4px 0 var(--primary);
+  font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; box-shadow: 4px 4px 0 var(--shadow);
 }
 .site-brand:hover { background: var(--primary); color: var(--secondary); border-color: var(--secondary); }
 .site-brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--primary); color: var(--secondary); font-size: 1.2rem; line-height: 1; }

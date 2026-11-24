@@ -2,8 +2,8 @@
 .pricing-grid { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 2rem); align-items: stretch; }
 
 .tier { position: relative; display: flex; flex-direction: column; padding: clamp(1.25rem, 3vw, 1.75rem); border: 3px solid var(--primary); border-radius: 22px;
-  background: var(--secondary); color: var(--primary); --on: var(--primary); --bg: var(--secondary); --edge: var(--primary); --ring: var(--primary); box-shadow: 8px 8px 0 var(--primary); }
-.tier.is-featured { background: var(--primary); color: var(--secondary); --on: var(--secondary); --bg: var(--primary); --edge: var(--primary); --ring: var(--secondary); }
+  background: var(--secondary); color: var(--primary); --on: var(--primary); --bg: var(--secondary); --edge: var(--shadow); --ring: var(--primary); box-shadow: 8px 8px 0 var(--shadow); }
+.tier.is-featured { background: var(--primary); color: var(--secondary); --on: var(--secondary); --bg: var(--primary); --edge: var(--shadow-dark); --ring: var(--secondary); }
 .tier-badge { position: absolute; top: -16px; right: 1.25rem; padding: 0.3rem 1rem; border-radius: 999px; background: var(--secondary); color: var(--primary); border: 3px solid var(--primary); font-weight: 800; font-size: 0.85rem; }
 .tier-head { padding-bottom: 1.25rem; }
 .tier-head h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.5rem; }
@@ -13,7 +13,7 @@
 .tier-period { margin-bottom: 0.5rem; font-weight: 600; }
 .tier-meta { margin-bottom: 1.25rem; font-weight: 700; }
 .tier-cta { width: 100%; }
-.tier.is-featured .tier-cta { box-shadow: 4px 4px 0 var(--secondary); }
+.tier.is-featured .tier-cta { box-shadow: 4px 4px 0 var(--shadow-dark); }
 .tier-rule { display: block; width: 100%; height: 3px; overflow: visible; margin-block: 1.75rem; }
 .tier-features-label { font-weight: 800; margin-bottom: 1rem; }
 .tier-features { list-style: none; display: grid; gap: 0.75rem; }
@@ -36,5 +36,5 @@
 @media (max-width: 699px) {
   .pricing-grid { grid-template-columns: 1fr; max-width: 460px; }
   .pricing-grid > :last-child:nth-child(odd) { width: 100%; }
-  .tier { box-shadow: 5px 5px 0 var(--primary); }
+  .tier { box-shadow: 5px 5px 0 var(--shadow); }
 }
